@@ -38,7 +38,7 @@ now = int(time.time()-86400)
 times = datetime.datetime.now().strftime("%Y-%m-%d")
 def SQL(database):
     dict = {}
-    db = MySQLdb.connect("45.79.71.23","mdtrade","trade@mingDA123",database)
+    db = MySQLdb.connect("11.11.11.11","mdtrade","trade@11111111",database)
     cursor = db.cursor()
     sql = "select type, count(lid) as num from log  where timestamp > %s and timestamp < Now() group by type;" %(now)
     try:
